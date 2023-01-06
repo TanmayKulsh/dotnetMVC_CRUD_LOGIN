@@ -1,0 +1,16 @@
+CREATE DATABASE shashankdb;
+use shashankdb;
+create table emp(
+empid int,
+name varchar(20),
+gender varchar(1),
+);
+insert into emp(100,'nikhil','m');
+
+delimiter $$
+create procedure updateemp(id int, name varchar(20))
+begin
+update emp set name = name where empid = id;
+end$$
+
+delimiter ;
