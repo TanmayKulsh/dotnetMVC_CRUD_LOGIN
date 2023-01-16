@@ -1,0 +1,35 @@
+﻿@using myapp.Models;
+@{
+    ViewData["Title"] = "Employee Page";
+    List<Employee> list = ViewData["allemps"] as List<Employee>;
+}
+
+<div>
+    <div className="container">
+        <h1>Employees</h1>
+        <div className="row">
+            <div className="col-sm-12">
+                <table>
+                     <tbody>
+                    <thead>
+                        <tr>
+                            <th>Id</th>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Address</th>
+                            <th>Phone</th>
+                        </tr>
+                    </thead>
+                        @foreach (Employee item in list)
+                        {
+                            <tr>
+                                <td>@item.Id &nbsp;</td>
+                                <td>@item.Name &nbsp;</td>
+                                <td>@item.Email &nbsp;</td>
+                                <td>@item.Address &nbsp;</td>
+                                <td>@item.Phone &nbsp;</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>

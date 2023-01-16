@@ -6,9 +6,6 @@ import Contact from "./components/Contact";
 function App() {
   return (
     <>
-    
-    
-    
       <Router>
         <Switch>           
           <Route path="/app"  component={ViewData} ></Route>
