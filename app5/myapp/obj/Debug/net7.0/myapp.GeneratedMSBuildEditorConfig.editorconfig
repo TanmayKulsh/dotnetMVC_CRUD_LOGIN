@@ -20,12 +20,8 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVcQWRkLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Nikhil Solankhi/Documents/GitHub/DOTNET Exam/app5/myapp/Views/Employee/Delete.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVcRGVsZXRlLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/Nikhil Solankhi/Documents/GitHub/DOTNET Exam/app5/myapp/Views/Employee/EditView.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVcRWRpdFZpZXcuY3NodG1s
+[C:/Users/Nikhil Solankhi/Documents/GitHub/DOTNET Exam/app5/myapp/Views/Employee/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Nikhil Solankhi/Documents/GitHub/DOTNET Exam/app5/myapp/Views/Employee/GetEmployees.cshtml]
@@ -34,10 +30,6 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/Nikhil Solankhi/Documents/GitHub/DOTNET Exam/app5/myapp/Views/Employee/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVcTG9naW4uY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/Nikhil Solankhi/Documents/GitHub/DOTNET Exam/app5/myapp/Views/Employee/Update.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVcVXBkYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Nikhil Solankhi/Documents/GitHub/DOTNET Exam/app5/myapp/Views/Home/Index.cshtml]

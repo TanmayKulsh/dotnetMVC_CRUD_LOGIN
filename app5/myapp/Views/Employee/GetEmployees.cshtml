@@ -5,29 +5,32 @@
 }
 
 <div>
-    <div className="container">
+    <div class="container">
         <h1>Employees</h1>
-        <div className="row">
-            <div className="col-sm-12">
-                <table className="table">
+        <div class="row">
+            <div class="col-sm-12">
+                <table class="table table-light table-striped">
                     <tbody>
                         <thead>
                             <tr>
-                                <th>Id</th>
-                                <th>Name</th>
+                                <th scope="col">Id</th>
+                                <th scope="col">Name</th>
+                                <th scope="col">Delete Action</th>
+                                <th scope="col">Edit Action</th>
                                 
                             </tr>
                         </thead>
                         @foreach (Employee item in list)
                         {
-                            <tr>
+                            <tr scope="row" >
                                 <td>@item.Id &nbsp;</td>
                                 <td>@item.Name &nbsp;</td>
-                                <td> <a href="/Employee/Delete/@item.Id">Delete &nbsp; </a> </td>
+                                <td> <button class="btn btn-danger btn-sm"><a href="/Employee/Delete/@item.Id">Delete &nbsp; </a> </button> </td>
 
-                                <td> <a href="/Employee/Edit/@item.Id">Edit</a> </td>
+                                <td> <button class="btn btn-warning btn-sm"><a href="/Employee/Edit/@item.Id">Edit</a></button>  </td>
                             </tr>
                         }
                     </tbody>
                 </table>
+                <button class="btn btn-info"><a href="/Employee/Add">AddEmployee</a></button> 
             </div>

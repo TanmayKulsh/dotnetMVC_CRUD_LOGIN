@@ -47,34 +47,28 @@ public class EmployeeController : Controller
         _DBTESTContext.SaveChanges();
         return RedirectToAction("GetEmployees");
     }
-    [HttpGet]
-    public IActionResult Edit(Employee empformedit)
+    public IActionResult Edit(int id)
     {
-        return RedirectToAction("EditView",empformedit);
+        var emp =_DBTESTContext.Employees.FirstOrDefault(x => x.Id == id);
+        return View(emp);
     }
 
-    [HttpGet]
-    public IActionResult EditView(Employee empformedit)
-    {
-        Employee emp = _DBTESTContext.Employees.Find(empformedit.Id);
-        ViewData["empedit"] = emp;
-        return View();
-    }
 
     [HttpPost]
-    public IActionResult updateEmp(Employee empUpdate)
+    public IActionResult Edit(Employee empUpdate)
     {
-        var emp = _DBTESTContext.Employees.FirstOrDefault(x=>x.Id==empUpdate.Id);
-        if(emp != null){
-            emp.Name=empUpdate.Name;
-            emp.Email=empUpdate.Email;
-            emp.Address=empUpdate.Address;
-            emp.Phone=empUpdate.Phone;
+        var emp = new Employee()
+        {
+            Id = empUpdate.Id,
+            Name = empUpdate.Name,
+            Email = empUpdate.Email,
+            Address = empUpdate.Address,
+            Phone = empUpdate.Phone,
+        };
 
-            
-        }
+        _DBTESTContext.Employees.Update(emp);
         _DBTESTContext.SaveChanges();
-        return RedirectToAction("GetEmployees"); 
+        return RedirectToAction("GetEmployees");
     }
 
     [HttpGet]
@@ -90,10 +84,11 @@ public class EmployeeController : Controller
         List<Employee> list = _DBTESTContext.Employees.ToList();
         foreach (Employee item in list)
         {
-         if(empform.Email==item.Email && empform.Id==item.Id)   {
-           
-            return RedirectToAction("GetEmployees");  
-         }
+            if (empform.Email == item.Email && empform.Id == item.Id)
+            {
+
+                return RedirectToAction("GetEmployees");
+            }
         }
         return RedirectToAction("Login");
     }
