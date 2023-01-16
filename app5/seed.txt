@@ -1,0 +1,13 @@
+create database DBTEST;
+use DBTEST;
+create table Employee(
+Id int primary key,
+Name varchar(100),
+Email varchar(100),
+Address varchar(100),
+Phone varchar(100));
+insert into Employee values(1,'Nikhil','nikhil.solankhi.ns@gmail.com','Rajasthan','123456789');
+insert into Employee values(2,'Tanmay','tanmay@gmail.com','Dholpur','987654321');
+insert into Employee values(3,'Deeksha','deeksha@gmail.com','Jhansi','456798123');
+insert into Employee values(4,'Mayank','mayank@gmail.com','Mumbai','654321987');
+insert into Employee values(5,'Yash','yash@gmail.com','Gujrat','987456321');
