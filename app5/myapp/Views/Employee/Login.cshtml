@@ -1,13 +1,10 @@
 @model myapp.Models.Employee;
 @{
-    ViewData["Title"] = "Employee Page";
+    ViewData["Title"] = "Login Page";
 }
 
 <form method="post" action="Add">
-    Id: <input type="text" asp-for="Id">
-    Name: <input type="text" asp-for="Name">
     Email: <input type="text" asp-for="Email">
     Address: <input type="text" asp-for="Address">
-    Phone: <input type="text" asp-for="Phone">
     <button type="submit">ADD</button>
 </form>

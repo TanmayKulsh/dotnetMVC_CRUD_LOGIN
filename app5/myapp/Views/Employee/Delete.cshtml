@@ -1,0 +1,10 @@
+@using myapp.Models;
+@model myapp.Models.Employee;
+@{
+    ViewData["Title"] = "Employee Page";
+}
+<h3>Enter ID of of Employee You want to delete</h3>
+<form method="post" action="Delete">
+    Id: <input type="text" asp-for="Id">
+    <button type="submit">Delete</button>
+</form>
