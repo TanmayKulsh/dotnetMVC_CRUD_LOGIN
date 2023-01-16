@@ -85,11 +85,17 @@ public class EmployeeController : Controller
     }
 
     [HttpPost]
-    public IActionResult Login(Employee empformadd)
+    public IActionResult Login(Employee empform)
     {
-        _DBTESTContext.Employees.Add(empformadd);
-        _DBTESTContext.SaveChanges();
-        return RedirectToAction("GetEmployees");
+        List<Employee> list = _DBTESTContext.Employees.ToList();
+        foreach (Employee item in list)
+        {
+         if(empform.Email==item.Email && empform.Id==item.Id)   {
+           
+            return RedirectToAction("GetEmployees");  
+         }
+        }
+        return RedirectToAction("Login");
     }
 
 }
